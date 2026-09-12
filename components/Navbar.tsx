@@ -12,7 +12,7 @@ export function Navbar() {
             Product
           </a>
           <a href="#how" className="transition-colors hover:text-fg">
-            How it works
+            How
           </a>
           <a href="#features" className="transition-colors hover:text-fg">
             Features
@@ -32,7 +32,7 @@ export function Navbar() {
           href="#waitlist"
           className="btn-flat inline-flex h-9 items-center rounded-md px-4 text-sm font-medium"
         >
-          Join waitlist
+          Waitlist
         </a>
       </div>
     </header>

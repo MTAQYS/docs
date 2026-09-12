@@ -21,14 +21,14 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 export const metadata: Metadata = {
   title: "Dynamogic Docs — Markdown to print-ready PDF",
   description:
-    "Write in Markdown. Export print-ready PDFs with quiet type and soft paper. Free convert; Pro brand kits. Part of the Dynamogic suite.",
+    "Write in Markdown. Export print-ready PDFs with quiet type and soft paper. Free convert; Pro brand kits.",
   icons: {
     icon: [{ url: `${basePath}/favicon.svg`, type: "image/svg+xml" }],
   },
   openGraph: {
     title: "Dynamogic Docs — MD → PDF",
     description:
-      "Markdown to polished PDF. Soft paper, charcoal calm. Future home: docs.dynamogic.com.",
+      "Markdown to polished PDF. Soft paper, charcoal calm. docs.dynamogic.com.",
   },
 };
 

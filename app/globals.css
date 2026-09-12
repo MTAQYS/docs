@@ -13,6 +13,7 @@
   --invert-bg: #2a2a28;
   --invert-fg: #fafaf8;
   --focus: #1a1a1a;
+  --ease-classical: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 html,
@@ -44,10 +45,10 @@ body {
 }
 
 .section-pad {
-  @apply py-16 sm:py-24;
+  @apply py-14 sm:py-20;
 }
 
-/* Vera classical: Inter display, weight capped at 700 */
+/* Inter display — weight capped at 700 */
 .display {
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
   font-weight: 600;
@@ -62,13 +63,14 @@ body {
   line-height: 1.02;
 }
 
+/* Sparse Inter label — use sparingly */
 .kicker {
   @apply text-sm text-fg-muted;
 }
 
-/* Flat CTA — no inset highlight, no soft glow */
 .btn-flat {
   @apply bg-[#2A2A28] text-invert-fg transition-colors duration-200;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 .btn-flat:hover {
   background-color: #3a3a36;

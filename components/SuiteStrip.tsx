@@ -24,21 +24,20 @@ export function SuiteStrip() {
     <section id="suite" className="section-pad" aria-label="Dynamogic suite">
       <div className="site-wrap">
         <Reveal>
-          <p className="kicker">Suite</p>
-          <h2 className="display-xl mt-3 text-[clamp(1.75rem,3.5vw,2.5rem)] text-fg">
+          <h2 className="display-xl text-[clamp(1.65rem,3.2vw,2.25rem)] text-fg">
             OS · BePro · Docs
           </h2>
-          <p className="mt-4 max-w-lg text-sm leading-relaxed text-fg-muted">
-            One soft paper system. Three doors across the Dynamogic family.
+          <p className="mt-3 max-w-md text-sm leading-relaxed text-fg-muted">
+            One paper system across the Dynamogic family.
           </p>
         </Reveal>
 
         <Reveal delay={40}>
-          <ul className="mt-10 grid gap-0 border-t border-border sm:grid-cols-3">
+          <ul className="mt-8 grid gap-0 border-t border-border sm:grid-cols-3">
             {products.map((p, i) => (
               <li
                 key={p.name}
-                className={`border-b border-border py-6 sm:border-b-0 sm:px-6 sm:py-8 first:sm:pl-0 last:sm:pr-0 ${
+                className={`border-b border-border py-5 sm:border-b-0 sm:px-6 sm:py-7 first:sm:pl-0 last:sm:pr-0 ${
                   i < products.length - 1 ? "sm:border-r" : ""
                 }`}
               >
@@ -52,14 +51,14 @@ export function SuiteStrip() {
                       {p.name}
                     </h3>
                     {p.current && (
-                      <span className="text-sm text-fg-muted">You are here</span>
+                      <span className="text-sm text-fg-muted">Here</span>
                     )}
                   </div>
-                  <p className="mt-2 text-sm leading-relaxed text-fg-muted">
+                  <p className="mt-1.5 text-sm leading-relaxed text-fg-muted">
                     {p.blurb}
                   </p>
                   {!p.current && (
-                    <span className="mt-3 inline-block text-sm text-fg underline decoration-border underline-offset-4 group-hover:decoration-fg">
+                    <span className="mt-2.5 inline-block text-sm text-fg underline decoration-border underline-offset-4 group-hover:decoration-fg">
                       Open →
                     </span>
                   )}

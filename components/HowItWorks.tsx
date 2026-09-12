@@ -4,7 +4,7 @@ const steps = [
   {
     num: "01",
     title: "Write",
-    body: "Draft or paste Markdown. Headings, lists, code — kept as structure.",
+    body: "Draft or paste Markdown. Structure stays intact.",
   },
   {
     num: "02",
@@ -14,33 +14,31 @@ const steps = [
   {
     num: "03",
     title: "Export",
-    body: "Print-ready PDF. Download for humans, or return a link for agents.",
+    body: "Print-ready PDF. Download, or return a link for agents.",
   },
 ];
 
 export function HowItWorks() {
   return (
-    <section id="how" className="border-y border-border section-pad">
+    <section id="how" className="section-pad">
       <div className="site-wrap">
         <Reveal>
-          <p className="kicker">How it works</p>
-          <h2 className="display-xl mt-3 max-w-[16ch] text-[clamp(1.75rem,3.5vw,2.5rem)] text-fg">
-            Three steps. No design debt.
+          <h2 className="display-xl max-w-[14ch] text-[clamp(1.65rem,3.2vw,2.25rem)] text-fg">
+            Three steps.
           </h2>
         </Reveal>
 
-        {/* Horizontal 01–03 with thin rules — not cards */}
-        <Reveal delay={40} className="mt-12">
+        <Reveal delay={40} className="mt-10">
           <ol className="grid gap-0 border-t border-border md:grid-cols-3">
             {steps.map((s, i) => (
               <li
                 key={s.num}
-                className={`border-b border-border py-8 md:border-b-0 md:px-6 md:py-10 first:md:pl-0 last:md:pr-0 ${
+                className={`border-b border-border py-7 md:border-b-0 md:px-6 md:py-9 first:md:pl-0 last:md:pr-0 ${
                   i < steps.length - 1 ? "md:border-r" : ""
                 }`}
               >
                 <span className="text-sm text-fg-muted">{s.num}</span>
-                <h3 className="mt-3 text-base font-semibold tracking-tight text-fg">
+                <h3 className="mt-2.5 text-[15px] font-semibold tracking-tight text-fg">
                   {s.title}
                 </h3>
                 <p className="mt-2 max-w-xs text-sm leading-relaxed text-fg-muted">
