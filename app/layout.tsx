@@ -6,20 +6,22 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
   display: "swap",
+  weight: ["400", "500"],
 });
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export const metadata: Metadata = {
-  title: "Dynamogic Docs — Markdown to PDF that looks intentional",
+  title: "Dynamogic Docs — Markdown to print-ready PDF",
   description:
-    "Write in Markdown. Export print-ready PDFs with soft paper craft. Free forever for core convert; Pro for brand kits, templates, and agent delivery. Part of the Dynamogic suite.",
+    "Write in Markdown. Export print-ready PDFs with quiet type and soft paper. Free convert; Pro brand kits. Part of the Dynamogic suite.",
   icons: {
     icon: [{ url: `${basePath}/favicon.svg`, type: "image/svg+xml" }],
   },

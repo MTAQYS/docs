@@ -3,7 +3,7 @@ type LogoProps = {
   markOnly?: boolean;
 };
 
-/** Mark: folded page with MD hash — Docs product identity. */
+/** Mark: folded page — Docs product identity. */
 export function Logo({ className = "", markOnly = false }: LogoProps) {
   const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
   return (

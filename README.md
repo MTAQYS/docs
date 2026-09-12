@@ -1,23 +1,23 @@
 # Dynamogic Docs
 
-**One-line pitch:** Markdown → print-ready PDF with soft paper craft — free core convert; Pro Brand Layer, templates, and agent delivery.
+**One-line pitch:** Markdown → print-ready PDF with soft paper craft — free core convert; Pro brand kits, templates, and agent delivery.
 
-Soft paper aesthetic · charcoal · Inter + JetBrains Mono · folded-page mark.
+Vera classical premium · Inter UI · JetBrains Mono only in MD stage · folded-page mark.
 
 | | |
 |---|---|
 | **Product** | Dynamogic Docs — MD → PDF |
-| **Suite** | [Dynamogic](https://mtaqys.github.io/dynamogic/) · [BePro](https://mtaqys.github.io/bepro/) |
+| **Suite** | [OS](https://mtaqys.github.io/dynamogic/) · [BePro](https://mtaqys.github.io/bepro/) · Docs |
 | **Future URL** | `docs.dynamogic.com` |
 | **Pages (now)** | `https://mtaqys.github.io/docs/` (basePath `/docs`) |
 
 ## Stack
 
 - **Next.js 15** (App Router) + **React 19** + **TypeScript**
-- **Tailwind CSS 3** — Dynamogic tokens (`bg` `#FAFAF8`, CTA `#2A2A28`, Inter / JetBrains Mono)
-- **Static export** via `output: 'export'` when `STATIC_EXPORT=1` (basePath `/docs` for project Pages)
+- **Tailwind CSS 3** — paper tokens (`#FAFAF8` / `#2A2A28`), Inter 400–700, JetBrains Mono in MD pane only
+- **Static export** via `output: 'export'` when `STATIC_EXPORT=1` (basePath `/docs`)
 
-No backend on this marketing site — waitlist is `mailto:` placeholder.
+No backend — waitlist is `mailto:` only.
 
 ## Local dev
 
@@ -34,25 +34,14 @@ npm run build:pages
 # → out/ with basePath /docs and .nojekyll
 ```
 
-### Pages checklist
+## Brand notes (Vera classical freeze)
 
-1. Host `out/` at `*.github.io/docs/` (or repo Pages with basePath `/docs`).
-2. For custom domain (`docs.dynamogic.com`), set empty `basePath` in `next.config.ts` and add a `CNAME` in `out/`.
-
-## Project layout
-
-```
-app/           layout + page + globals
-components/    Navbar, Hero, ProductStage, HowItWorks, Features, Pricing, SuiteStrip, Waitlist, Footer, Logo
-public/        favicon.svg, mark.svg
-out/           static export after build:pages
-```
-
-## Brand notes
-
-- Match Dynamogic soft light premium — **not** Seam colors/copy, **not** purple AI sludge.
-- Free: MD → PDF. Pro (~$15/mo placeholder): Brand Layer kits, templates, MCP delivery.
-- Suite strip: Brand Layer · BePro · Docs.
+- Inter only for UI (weights 400/500/600, max 700). JetBrains Mono **only** in MD stage + one code line.
+- Quiet Inter kickers (`text-sm text-fg-muted`) — no uppercase mono tracking.
+- Left hero, bigger MD\|PDF stage, horizontal how-it-works, editorial features (≤4), quiet 2-col pricing.
+- Motion: opacity + 6px Y, 200–280ms, ease `[0.22,1,0.36,1]`, once. No fog / loops / gradients.
+- Flat CTAs `#2A2A28`. Radius 8–10. Soft paper shadows.
+- Suite strip: **OS · BePro · Docs**.
 
 ## License
 

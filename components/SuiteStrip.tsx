@@ -1,21 +1,20 @@
+import { Reveal } from "./motion/Reveal";
+
 const products = [
   {
-    name: "Brand Layer",
-    blurb: "Persistent identity between AI and every document.",
+    name: "OS",
+    blurb: "Dynamogic hub — brand layer & suite home.",
     href: "https://mtaqys.github.io/dynamogic/",
-    tag: "Hub",
   },
   {
     name: "BePro",
-    blurb: "Freemium CV builder — free craft, Pro AI assist.",
+    blurb: "Freemium CV builder — free craft, Pro AI.",
     href: "https://mtaqys.github.io/bepro/",
-    tag: "CV",
   },
   {
     name: "Docs",
-    blurb: "Markdown → print-ready PDF with soft paper craft.",
+    blurb: "Markdown → print-ready PDF.",
     href: "#top",
-    tag: "You are here",
     current: true,
   },
 ];
@@ -24,64 +23,51 @@ export function SuiteStrip() {
   return (
     <section id="suite" className="section-pad" aria-label="Dynamogic suite">
       <div className="site-wrap">
-        <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-fg-muted">
-          Dynamogic suite
-        </p>
-        <h2 className="display-xl mt-4 max-w-[20ch] text-[clamp(2rem,4.5vw,3.25rem)] text-fg">
-          Brand Layer · BePro · Docs
-        </h2>
-        <p className="mt-5 max-w-xl text-[16px] leading-relaxed text-fg-muted">
-          One soft paper system. Three doors — brand memory, career craft, and
-          document delivery. Same charcoal calm across the family.
-        </p>
-        <ul className="mt-12 grid gap-4 md:grid-cols-3">
-          {products.map((p) => (
-            <li key={p.name}>
-              <a
-                href={p.href}
-                rel={p.current ? undefined : "noopener noreferrer"}
-                className={`group flex h-full flex-col rounded-xl border p-6 transition-colors sm:p-7 ${
-                  p.current
-                    ? "border-border-strong bg-invert-bg text-invert-fg shadow-billboard"
-                    : "paper-card hover:border-border-strong"
+        <Reveal>
+          <p className="kicker">Suite</p>
+          <h2 className="display-xl mt-3 text-[clamp(1.75rem,3.5vw,2.5rem)] text-fg">
+            OS · BePro · Docs
+          </h2>
+          <p className="mt-4 max-w-lg text-sm leading-relaxed text-fg-muted">
+            One soft paper system. Three doors across the Dynamogic family.
+          </p>
+        </Reveal>
+
+        <Reveal delay={40}>
+          <ul className="mt-10 grid gap-0 border-t border-border sm:grid-cols-3">
+            {products.map((p, i) => (
+              <li
+                key={p.name}
+                className={`border-b border-border py-6 sm:border-b-0 sm:px-6 sm:py-8 first:sm:pl-0 last:sm:pr-0 ${
+                  i < products.length - 1 ? "sm:border-r" : ""
                 }`}
               >
-                <div className="flex items-center justify-between gap-3">
-                  <h3
-                    className={`text-[15px] font-semibold tracking-tight ${
-                      p.current ? "text-invert-fg" : "text-fg"
-                    }`}
-                  >
-                    {p.name}
-                  </h3>
-                  <span
-                    className={`font-mono text-[10px] uppercase tracking-[0.18em] ${
-                      p.current ? "text-invert-fg/50" : "text-fg-muted"
-                    }`}
-                  >
-                    {p.tag}
-                  </span>
-                </div>
-                <p
-                  className={`mt-3 flex-1 text-sm leading-relaxed ${
-                    p.current ? "text-invert-fg/70" : "text-fg-muted"
-                  }`}
+                <a
+                  href={p.href}
+                  rel={p.current ? undefined : "noopener noreferrer"}
+                  className="group block"
                 >
-                  {p.blurb}
-                </p>
-                <span
-                  className={`mt-5 text-sm font-medium ${
-                    p.current
-                      ? "text-invert-fg"
-                      : "text-fg underline decoration-border underline-offset-4 group-hover:decoration-fg"
-                  }`}
-                >
-                  {p.current ? "Current product" : "Open →"}
-                </span>
-              </a>
-            </li>
-          ))}
-        </ul>
+                  <div className="flex items-baseline gap-2">
+                    <h3 className="text-[15px] font-semibold tracking-tight text-fg">
+                      {p.name}
+                    </h3>
+                    {p.current && (
+                      <span className="text-sm text-fg-muted">You are here</span>
+                    )}
+                  </div>
+                  <p className="mt-2 text-sm leading-relaxed text-fg-muted">
+                    {p.blurb}
+                  </p>
+                  {!p.current && (
+                    <span className="mt-3 inline-block text-sm text-fg underline decoration-border underline-offset-4 group-hover:decoration-fg">
+                      Open →
+                    </span>
+                  )}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
       </div>
     </section>
   );

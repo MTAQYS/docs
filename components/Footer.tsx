@@ -7,8 +7,11 @@ export function Footer() {
         <div>
           <Logo />
           <p className="mt-3 max-w-sm text-sm text-fg-muted">
-            Markdown → PDF under the Dynamogic suite. Soft paper, charcoal,
-            Inter + JetBrains Mono — documents that look intentional.
+            Markdown → PDF under the Dynamogic suite. Soft paper, charcoal, Inter
+            — documents that look intentional.
+          </p>
+          <p className="mt-4 text-sm text-fg-muted">
+            Suite · OS · BePro · Docs
           </p>
         </div>
         <div className="flex flex-col gap-2 text-sm text-fg-muted sm:items-end">
@@ -17,7 +20,7 @@ export function Footer() {
             className="font-medium text-fg underline decoration-border underline-offset-4 hover:decoration-fg"
             rel="noopener noreferrer"
           >
-            ← Back to Dynamogic hub
+            ← Dynamogic OS hub
           </a>
           <a
             href="https://mtaqys.github.io/bepro/"
@@ -26,9 +29,7 @@ export function Footer() {
           >
             BePro CV builder
           </a>
-          <p className="font-mono text-[11px] uppercase tracking-[0.18em]">
-            Future · docs.dynamogic.com
-          </p>
+          <p className="text-sm text-fg-muted">Future · docs.dynamogic.com</p>
           <p className="text-[13px]">© {new Date().getFullYear()} Dynamogic</p>
         </div>
       </div>

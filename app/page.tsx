@@ -10,8 +10,7 @@ import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="relative min-h-[100dvh] overflow-x-hidden">
-      <div className="pointer-events-none absolute inset-0 fog-layer" aria-hidden />
+    <div className="relative min-h-[100dvh] overflow-x-hidden bg-bg">
       <Navbar />
       <main>
         <Hero />

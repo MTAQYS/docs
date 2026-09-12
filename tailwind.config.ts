@@ -22,24 +22,27 @@ const config: Config = {
         sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
+      fontWeight: {
+        // Cap UI at 700 for classical freeze
+        bold: "700",
+      },
       borderRadius: {
         sm: "4px",
         DEFAULT: "6px",
         md: "8px",
         lg: "10px",
-        xl: "12px",
-        "2xl": "16px",
+        xl: "10px",
+        "2xl": "10px",
         full: "9999px",
       },
       boxShadow: {
         soft: "0 1px 2px rgb(26 26 26 / 6%)",
         paper: "0 8px 24px rgb(26 26 26 / 6%)",
-        billboard: "0 32px 80px -16px rgb(42 42 40 / 28%)",
-        stage: "0 24px 64px -20px rgb(42 42 40 / 22%)",
+        stage: "0 12px 40px -12px rgb(42 42 40 / 14%)",
       },
       letterSpacing: {
-        display: "-0.045em",
-        tightest: "-0.06em",
+        display: "-0.04em",
+        tightest: "-0.05em",
       },
     },
   },
