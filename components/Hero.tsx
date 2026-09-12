@@ -11,7 +11,7 @@ export function Hero() {
           </h1>
           <p className="mt-5 max-w-md text-[1.02rem] leading-relaxed text-fg-muted">
             Write once. Export a PDF with quiet type, soft margins, and your
-            mark on the page — print-shop calm, not template sludge.
+            mark on the page — print-shop calm.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
             <a
